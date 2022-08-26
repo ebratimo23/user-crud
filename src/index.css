@@ -1,0 +1,116 @@
+.form__conta{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+.form_none{
+    display: none;
+}
+.form{
+    background-color: #FFFFDE;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.form__title{
+    font-size: 1.7em;
+}
+
+.form__container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 40px;
+}
+
+.form__group{
+    position: relative;
+    gap: 2.5em;
+}
+
+.form__input{
+    width: 100%;
+    background: none;
+    font-size: 1rem;
+    padding: .6em 3em;
+    outline: none;
+    border: none;
+    border-bottom:1px solid #000 ;
+}
+
+.form__input:focus + .for__label,
+.form__input:not(:placeholder-shown) + .for__label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top ;
+    color: #3866f2;
+}
+
+.for__label{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.form__btn{
+    margin: 1.1em;
+    padding: 0.7em 1.8em;
+    border: none;
+    background-color: #3866f2;
+    font-size: 1.1em;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn-x{
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.3em;
+    border: none;
+    color: #b31919;
+    border-radius: 50%;
+    transition: 0.3s;
+    background: none;
+}
+
+.btn-x:hover{
+    scale: 1.2;
+}
+.form__btn:hover{
+    scale: 1.1;
+}
+
+.form__line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform 2s;
+}
+
+.form__input:focus ~ .form__line,
+.form__input:not(:placeholder-shown) ~ .form__line{
+    transform: scale(1);
+}

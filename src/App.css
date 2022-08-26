@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(162,255,218);
+    background: linear-gradient(0deg, rgba(162,255,218,1) 0%, rgba(255,255,255,1) 69%, rgba(121,223,244,1) 93%);
+}
+
+.title__app{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+.card__users{
+    padding: 10px;
+    width: 100%;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.user{
+    background: #f9fdff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 340px;
+    position: relative;
+    overflow: hidden;
+}
+.user h2{
+    text-align: center;
+}
+.animate{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #3866f2);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+    
+}
+
+.animate01{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #3866f2);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2{
+    
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(100%);
+        }
+    
+}
+
+.animate02{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, #3866f2);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+    
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    
+}
+
+.animate03{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #3866f2);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4{
+    
+        0%{
+            transform: translateY(100%);
+        }
+        100%{
+            transform: translateY(-100%);
+        }
+    
+}
+ul{
+    list-style: none;
+}
+
+
+.sp1{
+    font-weight: 600;
+}
+
+.card__btn{
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.delete{
+    width: 80px;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #f85b5b;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.edit{
+    width: 80px;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #f7c82f;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.delete:hover{
+    scale: 1.2;
+}
+.edit:hover{
+    scale: 1.2;
+}
+
+.btn-open{
+    height: 50px;
+    font-size: 0.7em;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    background-color: #3866f2;
+    color: #fff;
+}
